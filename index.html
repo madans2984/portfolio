@@ -108,6 +108,14 @@
       p {
         margin: 0;
       }
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(
+          3,
+          1fr
+        ); /* Three columns with equal width */
+        gap: 10px; /* Gap between grid items */
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -156,7 +164,7 @@
             They can be filtered by language or topic to learn more about
             specific skills.
           </p>
-          <div style="margin-top: 20px"></div>
+          <div style="margin-top: 18px"></div>
           <!-- Space between filters and images -->
           <section>
             <b>Filters</b>
@@ -207,6 +215,10 @@
                       value="Docker"
                     />
                     Docker
+                  </label>
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="CSS" />
+                    CSS
                   </label>
                 </div>
               </div>
@@ -261,210 +273,272 @@
                     />
                     Design
                   </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Algorithms"
+                    />
+                    Algorithms
+                  </label>
                 </div>
               </div>
             </div>
           </section>
-          <section>
-            <div class="row">
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://olincollege.github.io/uxd-2023-03/alicorn/"
-                  class="image fit Design"
+          <section class="wrapper">
+            <div>
+              <a
+                href="https://olincollege.github.io/uxd-2023-03/alicorn/"
+                class="image fit Design"
+                ><img
+                  src="images/animap.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/animap.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Designing a platform to connect animators
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/olincollege/ansible-4-softsys"
-                  class="image fit Curriculum YAML"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/olincollege/ansible-4-softsys"
+                class="image fit Curriculum YAML"
+                ><img
+                  src="images/ansible4softsys.jpg"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/ansible4softsys.jpg" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating ansible playbook for SoftSys setup
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/olincollege/scicomp-p3-fake-news-detection"
-                  class="image fit Python Machine_Learning"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/madans2984/docker-curriculum"
+                class="image fit R Docker Curriculum"
+                ><img
+                  src="images/docker_curriculum.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/fake_news.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Writing curriculum for teaching Docker
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <figure>
-                  <a
-                    href="https://github.com/olincollege/scicomp-p2-moon-water-migration"
-                    class="image fit Python Modeling"
-                    style="
-                      border: 2px solid black;
-                      display: inline-block;
-                      padding: 5px;
-                    "
-                  >
-                    <img src="images/water_migration.png" alt="" />
-                  </a>
-                  <figcaption style="font-size: 20px">
-                    Caption: Your caption text here.
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/olincollege/scicomp-p1-ant-sim"
-                  class="image fit Python Modeling"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/olincollege/scicomp-p3-fake-news-detection"
+                class="image fit Python Machine_Learning Algorithms"
+                ><img
+                  src="images/fake_news.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/ant_simulation.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Machine learning in fake news detection
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/Cbabe/L-2-1-Labeling"
-                  class="image fit Python Modeling"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/olincollege/scicomp-p2-moon-water-migration"
+                class="image fit Python Modeling"
+              >
+                <img
+                  src="images/water_migration.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/l(2,1).png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Modeling molecules hopping on planets
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/Cbabe/Sudoku_Solver"
-                  class="image fit Python Modeling"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/olincollege/scicomp-p1-ant-sim"
+                class="image fit Python Modeling"
+                ><img
+                  src="images/ant_simulation.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/sudoku_solver.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Modeling ants depositing pheromones
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/madans2984/docker-curriculum"
-                  class="image fit R Docker Curriculum"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/Cbabe/L-2-1-Labeling"
+                class="image fit Python Modeling"
+                ><img
+                  src="images/l(2,1).png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/docker_curriculum.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating L(2,1) labeling model
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/madans2984/covid19-dashboard"
-                  class="image fit R Docker Data_Science"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/Cbabe/Sudoku_Solver"
+                class="image fit Python Algorithms"
+                ><img
+                  src="images/sudoku_solver.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/covid_dashboard.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating sudoku solver
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/madans2984/olympic-games-analysis"
-                  class="image fit Python Data_Science"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/madans2984/covid19-dashboard"
+                class="image fit R Docker Data_Science"
+                ><img
+                  src="images/covid_dashboard.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/olympic_games_analysis.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating dashboard to track COVID-19 stats
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/madans2984/uno"
-                  class="image fit Python Modeling"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/madans2984/olympic-games-analysis"
+                class="image fit Python Data_Science"
+                ><img
+                  src="images/olympic_games_analysis.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/uno.jpg" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Analysis of Olympics, GDP, and Population
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://benmor20.github.io/QEA3-Final/"
-                  class="image fit Python Modeling"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/madans2984/uno"
+                class="image fit Python Design Algorithms"
+                ><img
+                  src="images/uno.jpg"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/beat_saber.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Terminal-based version of UNO
                 </figcaption>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <a
-                  href="https://github.com/olincollege/scicomp-p1-ant-sim"
-                  class="image fit Python Modeling"
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://benmor20.github.io/QEA3-Final/"
+                class="image fit Matlab Machine_Learning Algorithms"
+                ><img
+                  src="images/beat_saber.png"
+                  alt=""
                   style="
                     border: 2px solid black;
                     display: inline-block;
                     padding: 5px;
                   "
-                  ><img src="images/ant_simulation.png" alt=""
-                /></a>
-                <figcaption style="font-size: 20px">
-                  Caption: Your caption text here.
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  BPM/Song identification based on Beat Saber
                 </figcaption>
-              </div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://olincollege.github.io/pie-2021-03/Drink-Mixer/"
+                class="image fit CSS Design"
+                ><img
+                  src="images/drink_mixer.jpg"
+                  alt=""
+                  style="
+                    border: 2px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                  "
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating Drink Mixer
+                </figcaption>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/madans2984/text-algorithm-efficiency"
+                class="image fit Go"
+                ><img
+                  src="images/text_algo_efficiency.png"
+                  alt=""
+                  style="
+                    border: 2px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                  "
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Comparing text algorithm efficiencies
+                </figcaption>
+              </a>
             </div>
           </section>
         </article>
