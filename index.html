@@ -116,6 +116,21 @@
         ); /* Three columns with equal width */
         gap: 10px; /* Gap between grid items */
       }
+      .input-group {
+        display: flex;
+        gap: 10px; /* Adjust the space between the inputs as needed */
+      }
+
+      .input-group input {
+        flex: 1; /* This will make the inputs share the available space equally */
+      }
+      .message-field {
+        height: 300px; /* Adjust the height as needed */
+      }
+      .subject-field {
+        margin-top: 15px; /* Add bottom margin to create space between subject and input-group */
+        margin-bottom: 15px; /* Add bottom margin to create space between subject and input-group */
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -125,9 +140,6 @@
       <nav id="nav">
         <a href="#" class="icon solid fa-home"><span>About Me</span></a>
         <a href="#work" class="icon solid fa-folder"><span>Projects</span></a>
-        <a href="#contact" class="icon solid fa-envelope"
-          ><span>Contact</span></a
-        >
         <a href="https://github.com/madans2984/" class="icon brands fa-github"
           ><span>GitHub</span></a
         >
@@ -135,6 +147,9 @@
           href="https://www.linkedin.com/in/shreenithi-madan/"
           class="icon brands fa-linkedin"
           ><span>Linkedin</span></a
+        >
+        <a href="#contact" class="icon solid fa-envelope"
+          ><span>Contact</span></a
         >
       </nav>
 
@@ -199,9 +214,9 @@
                     <input
                       type="checkbox"
                       name="dropdown-group"
-                      value="Markdown"
+                      value="Matlab"
                     />
-                    Markdown
+                    Matlab
                   </label>
 
                   <label class="dropdown-option">
@@ -289,60 +304,6 @@
           <section class="wrapper">
             <div>
               <a
-                href="https://olincollege.github.io/uxd-2023-03/alicorn/"
-                class="image fit Design"
-                ><img
-                  src="images/animap.png"
-                  alt=""
-                  style="
-                    border: 2px solid black;
-                    display: inline-block;
-                    padding: 5px;
-                  "
-                />
-                <figcaption style="font-size: 18px; color: #777777">
-                  Designing a platform to connect animators
-                </figcaption>
-              </a>
-            </div>
-            <div>
-              <a
-                href="https://github.com/olincollege/ansible-4-softsys"
-                class="image fit Curriculum YAML"
-                ><img
-                  src="images/ansible4softsys.jpg"
-                  alt=""
-                  style="
-                    border: 2px solid black;
-                    display: inline-block;
-                    padding: 5px;
-                  "
-                />
-                <figcaption style="font-size: 18px; color: #777777">
-                  Creating ansible playbook for SoftSys setup
-                </figcaption>
-              </a>
-            </div>
-            <div>
-              <a
-                href="https://github.com/madans2984/docker-curriculum"
-                class="image fit R Docker Curriculum"
-                ><img
-                  src="images/docker_curriculum.png"
-                  alt=""
-                  style="
-                    border: 2px solid black;
-                    display: inline-block;
-                    padding: 5px;
-                  "
-                />
-                <figcaption style="font-size: 18px; color: #777777">
-                  Writing curriculum for teaching Docker
-                </figcaption>
-              </a>
-            </div>
-            <div>
-              <a
                 href="https://github.com/olincollege/scicomp-p3-fake-news-detection"
                 class="image fit Python Machine_Learning Algorithms"
                 ><img
@@ -416,10 +377,10 @@
             </div>
             <div>
               <a
-                href="https://github.com/Cbabe/Sudoku_Solver"
-                class="image fit Python Algorithms"
+                href="https://benmor20.github.io/QEA3-Final/"
+                class="image fit Matlab Machine_Learning Algorithms"
                 ><img
-                  src="images/sudoku_solver.png"
+                  src="images/beat_saber.png"
                   alt=""
                   style="
                     border: 2px solid black;
@@ -428,16 +389,16 @@
                   "
                 />
                 <figcaption style="font-size: 18px; color: #777777">
-                  Creating sudoku solver
+                  BPM/Song identification based on Beat Saber
                 </figcaption>
               </a>
             </div>
             <div>
               <a
-                href="https://github.com/madans2984/covid19-dashboard"
-                class="image fit R Docker Data_Science"
+                href="https://github.com/madans2984/text-algorithm-efficiency"
+                class="image fit Go Algorithms"
                 ><img
-                  src="images/covid_dashboard.png"
+                  src="images/text_algo_efficiency.png"
                   alt=""
                   style="
                     border: 2px solid black;
@@ -446,7 +407,7 @@
                   "
                 />
                 <figcaption style="font-size: 18px; color: #777777">
-                  Creating dashboard to track COVID-19 stats
+                  Comparing text algorithm efficiencies
                 </figcaption>
               </a>
             </div>
@@ -470,6 +431,43 @@
             </div>
             <div>
               <a
+                href="https://github.com/madans2984/docker-curriculum"
+                class="image fit R Docker Curriculum"
+                ><img
+                  src="images/docker_curriculum.png"
+                  alt=""
+                  style="
+                    border: 2px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                  "
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Writing curriculum for teaching Docker
+                </figcaption>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/madans2984/covid19-dashboard"
+                class="image fit R Docker Data_Science"
+                ><img
+                  src="images/covid_dashboard.png"
+                  alt=""
+                  style="
+                    border: 2px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                  "
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating dashboard to track COVID-19 stats
+                </figcaption>
+              </a>
+            </div>
+
+            <div>
+              <a
                 href="https://github.com/madans2984/uno"
                 class="image fit Python Design Algorithms"
                 ><img
@@ -488,10 +486,10 @@
             </div>
             <div>
               <a
-                href="https://benmor20.github.io/QEA3-Final/"
-                class="image fit Matlab Machine_Learning Algorithms"
+                href="https://olincollege.github.io/uxd-2023-03/alicorn/"
+                class="image fit Design"
                 ><img
-                  src="images/beat_saber.png"
+                  src="images/animap.png"
                   alt=""
                   style="
                     border: 2px solid black;
@@ -500,7 +498,7 @@
                   "
                 />
                 <figcaption style="font-size: 18px; color: #777777">
-                  BPM/Song identification based on Beat Saber
+                  Designing a platform to connect animators
                 </figcaption>
               </a>
             </div>
@@ -524,10 +522,10 @@
             </div>
             <div>
               <a
-                href="https://github.com/madans2984/text-algorithm-efficiency"
-                class="image fit Go"
+                href="https://github.com/Cbabe/Sudoku_Solver"
+                class="image fit Python Algorithms"
                 ><img
-                  src="images/text_algo_efficiency.png"
+                  src="images/sudoku_solver.png"
                   alt=""
                   style="
                     border: 2px solid black;
@@ -536,7 +534,25 @@
                   "
                 />
                 <figcaption style="font-size: 18px; color: #777777">
-                  Comparing text algorithm efficiencies
+                  Creating sudoku solver
+                </figcaption>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/olincollege/ansible-4-softsys"
+                class="image fit Curriculum YAML"
+                ><img
+                  src="images/ansible4softsys.jpg"
+                  alt=""
+                  style="
+                    border: 2px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                  "
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating ansible playbook for SoftSys setup
                 </figcaption>
               </a>
             </div>
@@ -548,30 +564,35 @@
           <header>
             <h2>Contact Me</h2>
           </header>
-          <form action="#" method="post">
-            <div>
-              <div class="row">
-                <div class="col-6 col-12-medium">
-                  <input type="text" name="name" placeholder="Name" />
-                </div>
-                <div class="col-6 col-12-medium">
-                  <input type="text" name="email" placeholder="Email" />
-                </div>
-                <div class="col-12">
-                  <input type="text" name="subject" placeholder="Subject" />
-                </div>
-                <div class="col-12">
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    rows="6"
-                  ></textarea>
-                </div>
-                <div class="col-12">
-                  <input type="submit" value="Send Message" />
-                </div>
-              </div>
+          <form action="https://formspree.io/f/mleqborz" method="POST">
+            <div class="input-group">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="_replyto"
+                placeholder="Your email"
+                required
+              />
             </div>
+            <input
+              type="text"
+              name="_subject"
+              placeholder="Subject"
+              class="subject-field"
+            />
+            <textarea
+              name="message"
+              placeholder="Your message"
+              required
+              class="message-field"
+            ></textarea>
+
+            <input
+              type="hidden"
+              name="_origin"
+              value="https://yourusername.github.io/yourrepository"
+            />
+            <input type="submit" value="Send Message" />
           </form>
         </article>
       </div>
