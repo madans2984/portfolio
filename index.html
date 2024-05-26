@@ -111,11 +111,12 @@
       .wrapper {
         display: grid;
         grid-template-columns: repeat(
-          3,
-          1fr
-        ); /* Three columns with equal width */
+          auto-fill,
+          minmax(300px, 1fr)
+        ); /* Adjust the minmax value as needed */
         gap: 10px; /* Gap between grid items */
       }
+
       .input-group {
         display: flex;
         gap: 10px; /* Adjust the space between the inputs as needed */
@@ -130,6 +131,9 @@
       .subject-field {
         margin-top: 15px; /* Add bottom margin to create space between subject and input-group */
         margin-bottom: 15px; /* Add bottom margin to create space between subject and input-group */
+      }
+      html {
+        scroll-behavior: smooth; /* Add smooth scrolling */
       }
     </style>
   </head>
@@ -235,6 +239,22 @@
                     <input type="checkbox" name="dropdown-group" value="CSS" />
                     CSS
                   </label>
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="C_CPP"
+                    />
+                    C/C++
+                  </label>
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="React"
+                    />
+                    React
+                  </label>
                 </div>
               </div>
               <div class="dropdown" data-control="checkbox-dropdown">
@@ -296,6 +316,15 @@
                       value="Algorithms"
                     />
                     Algorithms
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Front_End"
+                    />
+                    Front End
                   </label>
                 </div>
               </div>
@@ -450,7 +479,7 @@
             <div>
               <a
                 href="https://github.com/madans2984/covid19-dashboard"
-                class="image fit R Docker Data_Science"
+                class="image fit R Docker Data_Science Front_End"
                 ><img
                   src="images/covid_dashboard.png"
                   alt=""
@@ -469,7 +498,7 @@
             <div>
               <a
                 href="https://github.com/madans2984/uno"
-                class="image fit Python Design Algorithms"
+                class="image fit Python Design Algorithms Front_End"
                 ><img
                   src="images/uno.jpg"
                   alt=""
@@ -487,7 +516,7 @@
             <div>
               <a
                 href="https://olincollege.github.io/uxd-2023-03/alicorn/"
-                class="image fit Design"
+                class="image fit Design Front_End"
                 ><img
                   src="images/animap.png"
                   alt=""
@@ -556,6 +585,43 @@
                 </figcaption>
               </a>
             </div>
+            <div>
+              <a
+                href="https://github.com/olincollege/tetris"
+                class="image fit C_CPP Design Algorithms Front_End"
+                ><img
+                  src="images/tetris.png"
+                  alt=""
+                  style="
+                    border: 2px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                  "
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating Tetris in C
+                </figcaption>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://github.com/olincollege/grid-displays"
+                class="image fit Python React Design Front_End"
+                ><img
+                  src="images/grid_displays.png"
+                  alt=""
+                  style="
+                    border: 2px solid black;
+                    display: inline-block;
+                    padding: 5px;
+                  "
+                />
+                <figcaption style="font-size: 18px; color: #777777">
+                  Creating UI to display various forms of grid data
+                </figcaption>
+              </a>
+            </div>
           </section>
         </article>
 
@@ -586,12 +652,6 @@
               required
               class="message-field"
             ></textarea>
-
-            <input
-              type="hidden"
-              name="_origin"
-              value="https://yourusername.github.io/yourrepository"
-            />
             <input type="submit" value="Send Message" />
           </form>
         </article>
@@ -647,7 +707,7 @@
         CheckboxDropdown.prototype.updateStatus = function () {
           var checked = this.$el.find(":checked");
           this.areAllChecked = false;
-          this.$checkAll.html("Show All");
+          this.$checkAll.html("Check All");
 
           if (checked.length <= 0) {
             this.$label.html("Select Options");
@@ -722,14 +782,11 @@
           new CheckboxDropdown(checkboxesDropdowns[i]);
         }
       })(jQuery);
-    </script>
-    <script>
-      // Assuming you have an array to store the selected tags
-      var selectedTags = [];
 
       // Function to show all images
       function showAllImages() {
         $(".image").show(); // Show all images
+        $(".image").parent().show(); // Show all parent containers
       }
 
       // Event handler for when a tag is selected or deselected
@@ -753,37 +810,18 @@
 
       // Function to filter images based on selected tags
       function filterImages() {
-        $(".image").hide(); // Hide all images initially
+        $(".image").parent().hide(); // Hide all parent containers initially
 
-        // Show images that have any of the selected tags
+        // Show parent containers of images that have any of the selected tags
         selectedTags.forEach(function (tag) {
-          $(".image." + tag).show();
+          $(".image." + tag)
+            .parent()
+            .show();
         });
       }
 
-      // Event handler for when a tag is selected or deselected
-      // Event handler for when a tag is selected or deselected
-      $('.dropdown-option input[type="checkbox"]').change(function () {
-        var tag = $(this).val();
-        if ($(this).prop("checked")) {
-          selectedTags.push(tag); // Add selected tag to array
-        } else {
-          selectedTags = selectedTags.filter(function (item) {
-            return item !== tag; // Remove deselected tag from array
-          });
-        }
-
-        // Check if no checkboxes are selected
-        if (selectedTags.length === 0) {
-          showAllImages(); // Show all images
-        } else if (
-          $('.dropdown-option input[type="checkbox"]:checked').length === 0
-        ) {
-          showAllImages(); // Show all images if all checkboxes are unchecked
-        } else {
-          filterImages(); // Apply filtering based on selected tags
-        }
-      });
+      // Assuming you have an array to store the selected tags
+      var selectedTags = [];
     </script>
   </body>
 </html>
